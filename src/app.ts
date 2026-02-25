@@ -8,6 +8,7 @@ import { assetsRouter } from "./routes/assets";
 import { healthRouter } from "./routes/health";
 import { homeRouter } from "./routes/home";
 import { portfolioRouter } from "./routes/portfolio";
+import { usersRouter } from "./routes/users";
 
 const app = express();
 
@@ -21,5 +22,6 @@ app.use("/auth", authRouter);
 app.use("/assets", assetsRouter);
 app.use("/home", homeRouter);
 app.use("/portfolio", portfolioRouter);
+app.use("/users", usersRouter);
 
 export { app };
