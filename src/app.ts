@@ -4,6 +4,7 @@ import helmet from "helmet";
 import morgan from "morgan";
 
 import { authRouter } from "./routes/auth";
+import { assetsRouter } from "./routes/assets";
 import { healthRouter } from "./routes/health";
 import { homeRouter } from "./routes/home";
 import { portfolioRouter } from "./routes/portfolio";
@@ -17,6 +18,7 @@ app.use(morgan("dev"));
 
 app.use("/health", healthRouter);
 app.use("/auth", authRouter);
+app.use("/assets", assetsRouter);
 app.use("/home", homeRouter);
 app.use("/portfolio", portfolioRouter);
 
